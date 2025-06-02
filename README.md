@@ -13,3 +13,9 @@ brew install minio/aistor/minio
 ```sh
 brew install minio/aistor/mc
 ```
+
+## Install MinKMS
+
+```sh
+brew install minio/aistor/minkms
+```
