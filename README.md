@@ -1,6 +1,6 @@
 # Install AIStor MinIO from brew
 
-Official [Homebrew](https://brew.sh/)/[Linuxbrew](http://linuxbrew.sh/) packages for AIStor MinIO Server and Client.
+Official [Homebrew](https://brew.sh/) packages for AIStor MinIO Server and Client.
 
 ## Install AIStor MinIO Server
 
