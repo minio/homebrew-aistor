@@ -5,7 +5,7 @@ COMPONENTS=("minio" "mc" "minkms")
 BASE_URL="https://dl.min.io/aistor/%s/release/%s/"
 PLATFORMS_minio=("darwin-arm64" "darwin-amd64" "linux-arm64" "linux-amd64")
 PLATFORMS_mc=("darwin-arm64" "darwin-amd64" "linux-arm64" "linux-amd64")
-PLATFORMS_minkms=("linux-arm64" "linux-amd64") # FIXME: No darwin-* for minkms
+PLATFORMS_minkms=("darwin-amd64" "darwin-arm64" "linux-arm64" "linux-amd64")
 
 # Repository path is the current working directory
 REPO_PATH="."
