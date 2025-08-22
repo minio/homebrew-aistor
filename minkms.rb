@@ -1,5 +1,5 @@
 class Minkms < Formula
-  git_tag = "RELEASE.2024-10-17T11-32-21Z"  # MinKMS specific
+  git_tag = "RELEASE.2025-08-18T19-50-54Z"  # MinKMS specific
   
   desc "A cloud-native distributed KMS designed to build zero-trust infrastructures at scale"
   homepage "https://min.io"
@@ -13,10 +13,10 @@ class Minkms < Formula
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://dl.min.io/aistor/minkms/release/linux-arm64/archive/minkms.#{version}"
-      sha256 "1385da43544d568fda2153570362fd785d4cff68054646e6bce4284d5cafa2d3"
+      sha256 "6ef934b2abc7ab58316374aae9d3c685d9189c7e15dcd3a1b707c439b4d6d4f3"
     else
       url "https://dl.min.io/aistor/minkms/release/linux-amd64/archive/minkms.#{version}"
-      sha256 "c46e3ff5f05472b395ef7d7bedb7077d529eee9575d421181367a14609638601"
+      sha256 "fe1166770fb28ec690ae4c176173cb743fd211755b470ccb244650b891e96338"
     end
   end
 
