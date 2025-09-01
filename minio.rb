@@ -34,7 +34,7 @@ class Minio < Formula
     ohai "Useful links:"
     puts <<~EOS
       Documentation: https://docs.min.io/enterprise/aistor-object-store/
-      Talk to MinIO Engineering Support: https://subet.min.io
+      Talk to MinIO Engineering Support: https://subnet.min.io
     EOS
     ohai "Get started:"
     puts `#{bin}/minio server -h`
