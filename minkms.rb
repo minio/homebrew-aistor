@@ -1,5 +1,5 @@
 class Minkms < Formula
-  git_tag = "RELEASE.2026-04-09T16-36-52Z"  # MinKMS specific
+  git_tag = "RELEASE.2026-05-20T12-12-28Z"  # MinKMS specific
   
   desc "A cloud-native distributed KMS designed to build zero-trust infrastructures at scale"
   homepage "https://min.io"
@@ -10,17 +10,17 @@ class Minkms < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://dl.min.io/aistor/minkms/release/darwin-arm64/archive/minkms.#{version}"
-      sha256 "c86b2ba3d0d1d5ebe3b3bb3d5f8aad0fe440c09475f265ab0a0fd5efc8350a34"
+      sha256 "99c692033cab8d67d994ef70cdd386c744178f7077a86b856a99ac37176ef342"
     else
       url "https://dl.min.io/aistor/minkms/release/darwin-amd64/archive/minkms.#{version}"
-      sha256 "b7defa253880fe22e16a2fed161a6bc29116be73d6011b87950bc28732fbf91d"
+      sha256 "9ddb650d33aa2d380d440aa160d5d5cfce5e5c5a22251b30eaec83df16a60a56"
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://dl.min.io/aistor/minkms/release/linux-arm64/archive/minkms.#{version}"
-      sha256 "b5bf696930dcf095f39aa74beb974980474f96b90d85f0de34b6ce1257e61d0e"
+      sha256 "cf2bd8b1d4bb316ad90d87a70414277428a80b05a540f2d1bfeff7f2e1078af9"
     else
       url "https://dl.min.io/aistor/minkms/release/linux-amd64/archive/minkms.#{version}"
-      sha256 "f4efd5ce6a83296e8e3659334c12a9e682e091f1793febf160abf95267bca967"
+      sha256 "4bd36e39341333a6bf00efc4618a5bfcd99bf15e46cb3d5eed4e0a1ec16bad58"
     end
   end
 
