@@ -1,6 +1,6 @@
 class Mc < Formula
   # mc specific
-  git_tag = "RELEASE.2026-07-24T01-15-12Z"
+  git_tag = "RELEASE.2026-09-06T02-44-40Z"
 
   desc "Enterprise MinIO Client for object storage and filesystems"
   homepage "https://min.io"
@@ -11,18 +11,18 @@ class Mc < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://dl.min.io/aistor/mc/release/darwin-arm64/archive/mc.#{version}"
-      sha256 "e5f77503d41b408e6e7c110c1a8018b7d863d7d418dc10f26bbbfd78384a7611"
+      sha256 "24400a435a2c168f754d89c18fe63282855deccf300da3c89dae2f4e0e23a11f"
     else
       url "https://dl.min.io/aistor/mc/release/darwin-amd64/archive/mc.#{version}"
-      sha256 "8d9c8ad44ad9ae9d0836bd2a3da97f6ec3e208f0ce3bde0d1be3cf6c0f3d2ddf"
+      sha256 "be170be82ea275515546f653a2f03bf93149dd2cba9802cb651a09fd3311ae7b"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://dl.min.io/aistor/mc/release/linux-arm64/archive/mc.#{version}"
-      sha256 "6cbe5bfbcbd1d7637ab56e6b814df3ed29e647fcf4391a65d39c3bdfa6c5620c"
+      sha256 "3283b779571988a31f747f3c4f8414fa1fa20eff263ec12fd5d47278ad5e5d7b"
     else
       url "https://dl.min.io/aistor/mc/release/linux-amd64/archive/mc.#{version}"
-      sha256 "e3d3b53ca6d276c6f9056e99b7db59159be3befb5871bf088bb804955752d6ca"
+      sha256 "5a07c01f2e90ea3f2995d69bd69ea1a77af1d431a376e509eaa800074f789a37"
     end
   end
 
