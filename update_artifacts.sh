@@ -95,9 +95,27 @@ update_formula() {
 	fi
 }
 
+# Function to check whether a formula points at a labelled release, i.e. its
+# git_tag is set but is not a dated RELEASE.* tag (for example
+# git_tag = "11.0.0-stable"). Labelled formulas are owned by the release
+# pipeline, which sets their url and sha256 from the release's release.json;
+# this script only knows the dated /aistor/<component>/release/ listings and
+# would put dated checksums under the labelled urls.
+formula_is_labeled() {
+	local formula_file="$REPO_PATH/${1}.rb"
+	[ -f "$formula_file" ] || return 1
+	grep -q '^[[:space:]]*git_tag = "' "$formula_file" || return 1
+	! grep -q '^[[:space:]]*git_tag = "RELEASE\.[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}T[0-9]\{2\}-[0-9]\{2\}-[0-9]\{2\}Z"' "$formula_file"
+}
+
 # Main automation logic
 update_formulas() {
 	for component in "${COMPONENTS[@]}"; do
+		if formula_is_labeled "$component"; then
+			echo "Skipping $component: formula points at a labelled release"
+			continue
+		fi
+
 		# Fetch the latest release tag (use linux-amd64 as reference)
 		local new_version
 		new_version=$(fetch_latest_release "$component" "linux-amd64")
